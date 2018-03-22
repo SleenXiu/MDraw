@@ -77,8 +77,8 @@
     
     return CGRectMake(tl.x,
                       tl.y,
-                      fabsf(rb.x - tl.x),
-                      fabsf(rb.y - tl.y));
+                      fabs(rb.x - tl.x),
+                      fabs(rb.y - tl.y));
 }
 
 -(void)drawDown:(CGPoint)point

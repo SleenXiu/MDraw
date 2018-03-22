@@ -41,9 +41,12 @@
     
     if(text != Nil)
     {
-        textSize= [text sizeWithFont:textFont
-                   constrainedToSize:CGSizeMake(1024, 99999.0)
-                       lineBreakMode:NSLineBreakByWordWrapping];
+//        textSize= [text sizeWithFont:textFont
+//                   constrainedToSize:CGSizeMake(1024, 99999.0)
+//                       lineBreakMode:NSLineBreakByWordWrapping];
+        textSize = [text boundingRectWithSize:CGSizeMake(1024, 99999.0)
+                                      options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                   attributes:@{NSFontAttributeName: textFont} context:nil].size;
         
     }
     

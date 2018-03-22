@@ -415,7 +415,7 @@
     BOOL hasSelected = NO;
     _activeTool = Nil;
     
-    for (int i = _tools.count -1; i >= 0; i--)
+    for (int i = (int)_tools.count -1; i >= 0; i--)
     {
         MDrawTool *tool = [_tools objectAtIndex:i];
         
